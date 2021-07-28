@@ -70,7 +70,7 @@ main{
 
 .button{
 	margin-top: 25px;
-	
+
 	border-radius: 8px;
 	border: 0;
 	cursor: pointer;
@@ -88,6 +88,39 @@ main{
 }
 
 .button:active{
+	transform: translate(0px, 5px);
+	box-shadow: none;
+}
+
+.HexColor{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.copyButton{
+	margin-left: 10px;
+	border-radius: 8px;
+	border: 0;
+	cursor: pointer;
+	background-color: #9932cc;
+	color: aliceblue;
+	box-shadow: #8507c0 0px 5px;
+	
+}
+
+.copyButton img{
+	margin-top: 5px;
+	width: 20px;
+	height: 20px;
+}
+
+.copyButton:hover{
+	background-color: #9323ca;
+}
+
+.copyButton:active{
 	transform: translate(0px, 5px);
 	box-shadow: none;
 }

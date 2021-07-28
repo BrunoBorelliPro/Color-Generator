@@ -1,7 +1,7 @@
 const display = window.document.getElementById("color")
 const btn = window.document.getElementById("button")
 const body = window.document.getElementsByTagName("main")[0]
-
+const copyBtn = window.document.getElementById("copyBtn")
 let hex = getAnHexadecimal()
 applyColor(hex)
 
@@ -9,6 +9,20 @@ applyColor(hex)
 btn.addEventListener('click', (e)=>{
 	let hex = getAnHexadecimal()
 	applyColor(hex)
+})
+
+copyBtn.addEventListener('click', ()=>{
+
+	let toCopy = document.createElement('input')
+	document.body.appendChild(toCopy)
+	toCopy.setAttribute("id", "toCopyId")
+
+	document.getElementById("toCopyId").value = display.innerHTML
+	toCopy.focus()
+	toCopy.select()
+	document.execCommand('copy')
+
+	document.body.removeChild(toCopy)
 })
 
 function applyColor(hex){
