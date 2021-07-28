@@ -32,12 +32,9 @@ function applyColor(hex){
 }
 
 function getAnHexadecimal(){
-	let numberRandon = Math.random() * 10000000
-	number = Math.trunc(numberRandon)
-	let hex = number.toString(16)
-	if(hex.length !== 6){
-		hex = getAnHexadecimal()
-	}
+	let numberRandom = Math.random()
+	let hexRandom = numberRandom.toString(16)
+	let hex = hexRandom.substr(2,6)
 	return hex
 }
 
